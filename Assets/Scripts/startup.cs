@@ -3,6 +3,10 @@
 using AdGemUnity;
 using Facebook.Unity;
 
+//using PlayFab;
+//using PlayFab.ClientModels;
+//using PlayFab.Json;
+
 public class startup : MonoBehaviour
 {
     private const int adGemAppId = 2378;
@@ -10,10 +14,14 @@ public class startup : MonoBehaviour
     private bool UsesInterstitialVideos = true;
     private bool UsesRewardVideos = false;
     private bool UsesOfferWall = true;
+    private static string titleID = "AF02";
 
     // Start is called before the first frame update
     void Start()
     {
+        //Playfab
+        //PlayFabSettings.TitleId = titleID;
+
         //Adgem start
         AdGem.startSession(adGemAppId, UsesInterstitialVideos, UsesRewardVideos, UsesOfferWall);
 
